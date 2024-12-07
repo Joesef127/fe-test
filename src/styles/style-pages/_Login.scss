@@ -1,0 +1,150 @@
+.login-container {
+  @include flex-center;
+  height: 100vh;
+
+  .login-left,
+  .login-right {
+    flex: 1;
+    padding: 2rem;
+
+    @include flex-center;
+  }
+
+  .login-left {
+    background-color: $background;
+    height: 100vh;
+    align-items: flex-start;
+    padding-top: 80px;
+
+    .image-wrapper {
+      max-width: 600px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+      // height: 60%;
+      gap: 50px;
+    }
+
+    .logo {
+      margin-bottom: $spacing-base;
+      width: 173.76px;
+    }
+
+    .illustration {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+    }
+  }
+
+  .login-right {
+    background-color: $white;
+    height: 99.5vh;
+    margin-top: -0.5vh;
+    box-shadow: 0px 15px 90px 0px #00000008;
+
+    .login-form {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      h1 {
+        color: $text-color;
+        margin-bottom: 0.5rem;
+        font-family: $font-family-secondary;
+        font-size: $font-size-5;
+        font-weight: $font-weight-4;
+        line-height: 54.64px;
+        letter-spacing: -0.04em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+
+      p {
+        color: $text-secondary;
+        margin-bottom: 1.5rem;
+        font-family: $font-family-secondary;
+        font-size: $font-size-3;
+        font-weight: $font-weight-1;
+        line-height: 27.32px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+
+        .form-input {
+          width: 100%;
+          height: 50px;
+          padding: 0.75rem;
+          border: 2px solid $border-color;
+          border-radius: 5px;
+          font-family: $font-family-secondary;
+          font-size: $font-size-2;
+          font-weight: $font-weight-1;
+          line-height: 19.12px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+      }
+
+      .password-group {
+        position: relative;
+
+        .show-password {
+          position: absolute;
+          right: $spacing-base;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          color: $primary-color;
+          font-size: $font-size-1;
+          cursor: pointer;
+          font-family: $font-family-secondary;
+          font-weight: $font-weight-3;
+          line-height: 16.39px;
+          letter-spacing: 0.1em;
+          text-align: center;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+      }
+
+      .forgot-password {
+        display: block;
+        text-align: left;
+        text-decoration: none;
+        color: $primary-color;
+        font-size: $font-size-1;
+        font-family: $font-family-secondary;
+        font-weight: $font-weight-3;
+        line-height: 16.39px;
+        letter-spacing: 0.1em;
+        margin-bottom: 1.5rem;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+
+      .login-button {
+        @include button($primary-color, $white);
+        width: 100%;
+        font-family: $font-family-secondary;
+        font-size: $font-size-2;
+        font-weight: $font-weight-3;
+        line-height: 19.12px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+    }
+  }
+}

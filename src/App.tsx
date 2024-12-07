@@ -1,24 +1,19 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from '../src/pages/Login.tsx';
+import Dashboard from '../src/pages/Dashboard.tsx';
+
 // import NavBar from './components/NavBar.tsx';
 
-interface WelcomeProps {
-  name: string;
-}
-
-const Welcome = ({ name }: WelcomeProps) => {
-  return (
-    <>
-      <h1>Hello {name}!</h1>
-      <p>Welcome to Lendsqr</p>
-    </>
-  );
-};
 
 const App = () => {
   return (
-    <div>
-      <Welcome name="Idowu" /> 
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </Router>
   );
 };
 

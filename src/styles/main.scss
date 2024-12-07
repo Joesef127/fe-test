@@ -1,8 +1,18 @@
-body {
-  background-color: #f0f0f0;
-  font-family: Arial, sans-serif;
+// Abstracts
+@import '../styles/abstracts/variables';
+@import '../styles/abstracts/mixins';
 
-  h1 {
-    color: #333;
-  }
-}
+// Base
+@import '../styles/base/reset';
+@import '../styles/base/typography';
+
+// Layout
+
+//components
+
+//pages
+@import '../styles/style-pages/Login';
+@import '../styles/style-pages/App';
+
+//vendors
+@import '../styles/vendors/fonts';
