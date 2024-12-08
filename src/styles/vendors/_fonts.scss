@@ -1,2 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+// Avenir Next Font
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../../assets/fonts/Avenir_Next/Avenir-next-lt-pro/AvenirNextLTPro-Regular.otf')
+    format('truetype');
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../../assets/fonts/Avenir_Next/Avenir-next-lt-pro/AvenirNextLTPro-Bold.otf')
+    format('truetype');
+  font-weight: 700; // Bold
+  font-style: normal;
+}
+
+// Work Sans Font
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../../assets/fonts/Work_Sans/static/WorkSans-Regular.ttf') format('truetype');
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../../assets/fonts/Work_Sans/static/WorkSans-Bold.ttf') format('truetype');
+  font-weight: 700; // Bold
+  font-style: normal;
+}
 

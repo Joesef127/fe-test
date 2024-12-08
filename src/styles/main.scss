@@ -9,10 +9,13 @@
 // Layout
 
 //components
+@import '../styles/components/Navbar';
+
 
 //pages
 @import '../styles/style-pages/Login';
 @import '../styles/style-pages/App';
+@import '../styles/style-pages/Dashboard';
 
 //vendors
 @import '../styles/vendors/fonts';

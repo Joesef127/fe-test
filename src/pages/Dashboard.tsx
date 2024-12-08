@@ -7,7 +7,7 @@ const Dashboard: React.FC = () => {
       <Navbar />
       <div className="dashboard-container">
         <h1>User Dashboard</h1>
-        <p>welcome to user dashboard</p>
+        <p>welcome to user dashboard</p> 
       </div>
     </div>
   );
