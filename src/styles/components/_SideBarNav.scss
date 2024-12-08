@@ -1,0 +1,33 @@
+.side-nav-container {
+  display: flex;
+  gap: 10px;
+  padding: 10px 30px;
+  border: 3px solid transparent;
+  border-width:0 0 0 3px;
+
+  cursor: pointer;
+
+  &:hover {
+  border: 3px solid $primary-color;
+  border-width: 0 0 0 3px;
+  background-color: #F3FCFC;
+  }
+
+  .side-nav-text {
+    color: $text-color-dim;
+    font-size: $font-size-base;
+    font-weight: $font-weight-1;
+    line-height: 18.77px;
+    text-align: left;
+    text-decoration-skip-ink: none;
+
+    &:hover {
+      color: $text-color;
+    }
+  }
+
+  .side-nav-icon {
+    width: 16px;
+    fill: $text-color-dim;
+  }
+}

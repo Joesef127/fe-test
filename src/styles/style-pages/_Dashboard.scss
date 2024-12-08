@@ -1,4 +1,8 @@
 .dashboard-wrapper {
   background-color: $background;
   height: 100vh;
+
+  .dashboard-container {
+    display: flex;
+  }
 }

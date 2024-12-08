@@ -5,7 +5,7 @@ import bell from '../assets/icons/bell.png';
 import avatar from '../assets/images/avatar.png';
 import down_arrow from '../assets/icons/down_arrow.png';
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   return (
     <div className="navbar">
       <div className="nav-logo-div">

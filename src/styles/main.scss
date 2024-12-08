@@ -7,9 +7,12 @@
 @import '../styles/base/typography';
 
 // Layout
+@import '../styles/layout/Navbar';
+@import '../styles/layout/Sidebar';
 
 //components
-@import '../styles/components/Navbar';
+@import '../styles/components/SideBarNav';
+@import '../styles/components/SideBarSection';
 
 
 //pages

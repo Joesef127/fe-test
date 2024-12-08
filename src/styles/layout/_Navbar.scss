@@ -27,8 +27,6 @@
       width: 400px;
       display: flex;
       align-items: center;
-      // justify-content: space-between;
-      // overflow: hidden;
 
       .search-input {
         font-family: $font-family-base;
@@ -93,9 +91,7 @@
       }
 
       .info-span:last-of-type {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         gap: 10px;
         margin-left: -20px;
 
