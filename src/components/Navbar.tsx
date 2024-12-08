@@ -1,5 +1,9 @@
 import React from 'react';
 import logo from '../assets/images/logo.png';
+import search from '../assets/icons/search.png';
+import bell from '../assets/icons/bell.png';
+import avatar from '../assets/images/avatar.png';
+import down_arrow from '../assets/icons/down_arrow.png';
 
 const Navbar = () => {
   return (
@@ -12,12 +16,26 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search for anything"
-            className="search"
+            className="search-input"
           />
-        </div>
+          <button type="submit" className="search-btn">
+            <img src={search} alt="search icon" className="search-icon" />
+          </button>
+        </div>    
         <div className="user-info">
-          <span>Docs</span>
-          <img src="/path-to-user-avatar.png" alt="User" />
+          <span className='info-span'>
+            <p>Docs</p>
+          </span>
+          <span className='info-span'>
+            <img src={bell} alt="bell icon" className="bell-icon" />
+          </span>
+          <span className='info-span'>
+            <img src={avatar} alt="User" className='user-avatar' />
+          </span>
+          <span className='info-span'>
+            <p className="user-name">Adedeji</p>
+            <img src={down_arrow} alt="down arrow" />
+          </span>
         </div>
       </div>
     </div>

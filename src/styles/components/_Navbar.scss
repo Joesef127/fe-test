@@ -7,12 +7,10 @@
 
   .nav-logo-div {
     width: 25%;
-    
+
     .navbar-logo {
       width: 144.8px;
       height: 30px;
-      top: 35px;
-      left: 30px;
       padding: 0px;
       gap: 0px;
       opacity: 0px;
@@ -25,31 +23,86 @@
     align-items: center;
     justify-content: space-between;
 
-    .search {
-      width: 300px;
-      padding: 12px 20px;
-      border: 1px solid #ccc;
+    .nav-search-box {
+      width: 400px;
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      // overflow: hidden;
 
-      font-family: $font-family-base;
-      font-size: $font-size-2;
-      font-weight: $font-weight-1;
-      color: $text-secondary;
-      line-height: 16.42px;
-      text-align: left;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
-      
+      .search-input {
+        font-family: $font-family-base;
+        font-size: $font-size-2;
+        font-weight: $font-weight-1;
+        color: $text-secondary;
+        line-height: 16.42px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        border: none;
+        outline: none;
+        width: 80%;
+        border: 1px solid #21407d45;
+        border-width: 1px 0 1px 1px;
+        border-radius: 8px 0 0 8px;
+        padding: 13px 20px;
+
+        &::placeholder {
+          opacity: 70%;
+        }
+      }
+
+      .search-btn {
+        padding: 12px 21px;
+        background-color: $primary-color;
+        border-width: 1px 1px 1px 0;
+        border: 1px solid $primary-color;
+        border-radius: 0 8px 8px 0;
+      }
+      .search-icon {
+        width: 16px;
+        height: 16px;
+        fill: $text-secondary;
+        cursor: pointer;
+        transition: fill 0.3s;
+      }
     }
-  
+
     .user-info {
       display: flex;
       align-items: center;
-  
-      img {
-        border-radius: 50%;
-        margin-left: 10px;
+      gap: 30px;
+
+      .info-span {
+        cursor: pointer;
+      }
+
+      .info-span:first-of-type p {
+        margin-right: 20px;
+        margin-bottom: 0;
+        color: $text-color;
+        font-family: $font-family-roboto;
+        font-size: $font-family-base;
+        font-weight: $font-weight-1;
+        line-height: 18.75px;
+        text-align: left;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;        
+      }
+
+      .info-span:last-of-type {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-left: -20px;
+
+        .user-name {
+          margin: 0;
+        }
       }
     }
   }
-
 }
