@@ -1,5 +1,5 @@
 // sideBarData.ts
-import Icons from '../utils/IconImports.ts';
+import Icons from './IconImports.ts';
 
 const SideBarItems = [
   {

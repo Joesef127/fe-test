@@ -1,0 +1,31 @@
+.summary-card {
+  background-color: $white;
+  border: 1px solid #213f7d0f;
+  border-radius: 4px;
+  padding: 20px 30px;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 220px;
+
+  .users-card-content {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    .users-text {
+      font-size: $font-size-2;
+      font-weight: $font-weight-2;
+      line-height: 16.42px;
+      text-align: left;
+    }
+
+    .users-value {
+      font-size: $font-size-4;
+      font-weight: $font-weight-3;
+      line-height: 18.77px;
+    }
+  }
+}

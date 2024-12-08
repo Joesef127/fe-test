@@ -1,0 +1,19 @@
+.main-container {
+  width: 100%;
+  padding: 60px;
+  overflow-y: scroll;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+
+  &::-webkit-scrollbar {
+    display: none; 
+  }
+
+  .summary-cards-div {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    // flex-wrap: wrap;
+  }
+
+}
