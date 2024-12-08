@@ -51,29 +51,41 @@
       flex-direction: column;
       gap: 30px;
 
-      h1 {
-        color: $text-color;
-        margin-bottom: 0.5rem;
-        font-family: $font-family-secondary;
-        font-size: $font-size-5;
-        font-weight: $font-weight-4;
-        line-height: 54.64px;
-        letter-spacing: -0.04em;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
+      .form-greeting {
+        h1 {
+          color: $text-color;
+          margin-bottom: 0.5rem;
+          font-family: $font-family-secondary;
+          font-size: $font-size-5;
+          font-weight: $font-weight-4;
+          line-height: 54.64px;
+          letter-spacing: -0.04em;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+
+        p {
+          color: $text-secondary;
+          // margin-bottom: 1.5rem;
+          font-family: $font-family-secondary;
+          font-size: $font-size-3;
+          font-weight: $font-weight-1;
+          line-height: 27.32px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
       }
 
-      p {
-        color: $text-secondary;
-        margin-bottom: 1.5rem;
-        font-family: $font-family-secondary;
-        font-size: $font-size-3;
-        font-weight: $font-weight-1;
-        line-height: 27.32px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
+      .error-div {
+        height: 24px;
+        padding-bottom: 5px;
+
+        .error-message {
+          color: red;
+          font-size: $font-size-base;
+        }
       }
 
       .form-group {

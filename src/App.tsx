@@ -6,7 +6,7 @@ import Dashboard from '../src/pages/Dashboard.tsx';
 // import NavBar from './components/NavBar.tsx';
 
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <Router>
       <Routes>

@@ -1,32 +1,33 @@
-import React, {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import illustration from '../assets/images/illustration.png';
-
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [showPassword, setShowPassword] = useState<boolean>(false);
-  const [error, setError] = useState<string>('');
+  const [error, setError] = useState<string | null>('');
   const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!email ||!password) {
+    if (!email || !password) {
       setError('Please fill in all fields.');
       return;
     }
 
-    // Simulate login with email and password
-    if (email === 'test@example.com' && password === 'test123') {
-      setError('');
-      navigate('/dashboard');
-    } else {
-      setError('Invalid email or password.');
+    if (password.length <= 6) {
+      setError('password must be at least 6 characters');
+      return;
     }
-  }
+
+    setError(null);
+
+    console.log('Login successful!');
+    navigate('/dashboard');
+  };
 
   return (
     <div className="login-container">
@@ -44,27 +45,42 @@ const Login: React.FC = () => {
             <p>Enter details to login.</p>
           </div>
 
-          <form className="form-box">
+          <form id='login-form' className="form-box" onSubmit={handleSubmit}>
+            <div className="error-div">
+              {error && <span className="error-message">{error}</span>}
+            </div>
             <div className="form-group">
-              <input type="email" placeholder="Email" className="form-input" />
+              <input
+                type="email"
+                placeholder="Email"
+                className="form-input"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
 
             <div className="form-group password-group">
               <input
-                type="password"
+                type={showPassword ? 'text' : 'password'}
                 placeholder="Password"
                 className="form-input password-input"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
-              <button type="button" className="show-password">
-                SHOW
+              <button
+                type="button"
+                className="show-password"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? 'HIDE' : 'SHOW'}
               </button>
             </div>
 
-            <a href="#" className="forgot-password">
+            <Link to={'#'} className="forgot-password">
               FORGOT PASSWORD?
-            </a>
+            </Link>
 
-            <button type="submit" className="login-button">
+            <button type="submit" className="login-button" form='login-form'>
               LOG IN
             </button>
           </form>
