@@ -5,12 +5,13 @@ import active_users from '../assets/icons/active_users.png';
 import users_with_loans from '../assets/icons/users_with_loans.png';
 import users_with_savings from '../assets/icons/users_with_savings.png';
 import UserTable from './UserTable.tsx';
+import UserFilter from './UserFilter.tsx';
 
 const MainContent: React.FC = () => {
   return (
     <div className="main-container">
       <div className="summary-block">
-        <h2 className='summary-heading'>Users</h2>
+        <h2 className="summary-heading">Users</h2>
         <div className="summary-cards-div">
           <SummaryCard icon={users_badge} label="USERS" value={2453} />
           <SummaryCard icon={active_users} label="ACTIVE USERS" value={2453} />
@@ -26,7 +27,6 @@ const MainContent: React.FC = () => {
           />
         </div>
       </div>
-      {/* <UserTable /> */}
       <UserTable />
     </div>
   );

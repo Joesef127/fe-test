@@ -1,18 +1,19 @@
 /* Wrapper for the entire table */
 .users-table-wrapper {
+  position: relative;
   width: max-content;
   background-color: $white;
   margin-top: 40px;
   padding: 30px;
   border-radius: 4px;
-  box-shadow: 3px 5px 20px 0px #0000000A;
-  border: 1px solid #213F7D0F
+  box-shadow: 3px 5px 20px 0px #0000000a;
+  border: 1px solid #213f7d0f;
 }
 
 /* Header styles */
 .table-header {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); 
+  grid-template-columns: repeat(6, 1fr);
   padding: 10px 0;
   margin-bottom: 6px;
 }
@@ -52,20 +53,27 @@
 .table-body {
   display: grid;
   gap: 1px;
+
+  .table-row-wrapper {
+    position: relative;
+
+    &:last-child {
+      .table-row {
+        border-bottom: 0px;
+        padding-bottom: 0;
+      }
+    }
+  }
 }
 
 .table-row {
+  // position: relative;
   display: grid;
-  grid-template-columns: repeat(6, 1fr); 
+  grid-template-columns: repeat(6, 1fr);
   padding: 20px 0;
   // background-color: white;
-  border-bottom: 1px solid #213F7D1A;
+  border-bottom: 1px solid #213f7d1a;
 
-
-  &:last-child {
-  border-bottom: 0px;
-  padding-bottom: 0;
-  }
 }
 
 .table-row:hover {
@@ -82,7 +90,6 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  
 }
 
 .table-data:nth-child(4) {
@@ -97,8 +104,13 @@
   position: relative;
 
   .options-icon {
+    padding: 10px;
     position: absolute;
     right: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
   }
 }
 
@@ -108,23 +120,23 @@
 }
 
 .status-pill.inactive {
-  background-color: #F5F5F7;
-  color: #545F7D;
+  background-color: #f5f5f7;
+  color: #545f7d;
 }
 
 .status-pill.active {
-  background-color: #F3FCF6;
-  color: #39CD62;
+  background-color: #f3fcf6;
+  color: #39cd62;
 }
 
 .status-pill.pending {
-  background-color: #FDF7E5;
-  color: #E9B200;
+  background-color: #fdf7e5;
+  color: #e9b200;
 }
 
 .status-pill.blacklisted {
-  background-color: #FCE6EB;
-  color: #E4043B;
+  background-color: #fce6eb;
+  color: #e4043b;
 }
 
 /* Pagination styles */

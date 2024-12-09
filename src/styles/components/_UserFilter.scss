@@ -1,0 +1,91 @@
+.user-filter-wrapper {
+  position: absolute;
+  top: 64px;
+  padding: 30px 20px;
+  background-color: $white;
+  border-radius: 4px;
+  box-shadow: 3px 5px 20px 0px #0000000a;
+  border: 1px solid #545f7d24;
+  width: fit-content;
+  z-index: 999;
+
+  .user-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .filter-box {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      .filter-label {
+        color: $text-secondary;
+        font-size: $font-size-2;
+        font-weight: $font-weight-2;
+        line-height: 16.42px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+
+      .filter-input {
+        padding: 12px 20px;
+        color: $text-secondary;
+        padding: 0.5rem;
+        border-radius: 4px;
+        border: 1px solid $border-color;
+        font-size: 1rem;
+        border: 1px solid #d3d9e5;
+        border-radius: 8px;
+        font-size: $font-size-2;
+        font-weight: $font-weight-1;
+        line-height: 16.42px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+    }
+
+    .button-box {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+
+      .filter-button {
+        padding: 12px 30px;
+        border-radius: 8px;
+        background-color: transparent;
+        border: 1px solid $text-secondary;
+        font-size: $font-size-2;
+        font-weight: $font-weight-3;
+        line-height: 16.42px;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        cursor: pointer;
+
+        &:first-child {
+          color: $text-secondary;
+
+          &:hover {
+            background-color: $border-color;
+            @include transition(all, 0.3s);
+          }
+        }
+
+        &:last-child {
+          color: $white;
+          background-color: $primary-color;
+          border: 1px solid $primary-color;
+
+          &:hover {
+            border: 1px solid $primary-hover;
+            background-color: $primary-hover;
+            @include transition(all, 0.3s);
+          }
+        }
+      }
+    }
+  }
+}
