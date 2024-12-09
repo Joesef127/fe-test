@@ -1,7 +1,7 @@
 .sidebar-container {
-  width: 30%;
-  max-width: 283px;
-  height: calc(100vh - 112px);
+  width: max-content;
+  // max-width: 283px;
+  height: 100vh;
   box-shadow: 0px 5px 20px 0px #0000000a;
   background-color: $white;
   overflow-y: scroll;

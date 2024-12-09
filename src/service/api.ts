@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://run.mocky.io/v3/372f031c-eeb5-471f-a620-4a41d0e1b027';
+const BASE_URL = 'https://run.mocky.io/v3/d1e2367a-7414-4a6f-a93e-4e4ba281c358';
 
 export const fetchUsers = async () => {
   try {

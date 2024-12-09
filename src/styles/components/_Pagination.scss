@@ -1,0 +1,76 @@
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.pagination-info {
+  color: #545F7D;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.42px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.users-per-page-dropdown {
+  padding: 8px 16px;
+  color: $text-color;
+  background-color: #213F7D1A;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.42px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  
+  &:hover, &:focus, &:active {
+    border: 1px solid $text-color;
+    outline: $text-color;
+  }
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+
+.pagination-btn {
+  background: none;
+  border: none;
+  color: #555; /* Page number color */
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.pagination-btn.active {
+  color: #000; /* Active page color */
+  font-weight: bold;
+}
+
+.pagination-arrow {
+  background-color: #f0f0f0; /* Arrow button background */
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #333;
+}
+
+.pagination-arrow:disabled {
+  color: #bbb;
+  cursor: not-allowed;
+}
+
+.pagination-arrow svg {
+  fill: #555; /* Arrow color */
+}

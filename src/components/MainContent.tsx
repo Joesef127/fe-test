@@ -4,7 +4,7 @@ import users_badge from '../assets/icons/users_badge.png';
 import active_users from '../assets/icons/active_users.png';
 import users_with_loans from '../assets/icons/users_with_loans.png';
 import users_with_savings from '../assets/icons/users_with_savings.png';
-import UserTable from './UsersTable.tsx';
+import UserTable from './UserTable.tsx';
 
 const MainContent: React.FC = () => {
   return (
@@ -26,6 +26,7 @@ const MainContent: React.FC = () => {
           />
         </div>
       </div>
+      {/* <UserTable /> */}
       <UserTable />
     </div>
   );

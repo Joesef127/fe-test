@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import TableRow from './TableRow.tsx';
 import Pagination from './Pagination.tsx';
 import { fetchUsers } from '../service/api.ts';
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
+import filter from '../assets/icons/filter.png';
 
-const UserTable: React.FC = () => {
+const UsersTable: React.FC = () => {
   const [users, setUsers] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -36,32 +37,66 @@ const UserTable: React.FC = () => {
   );
 
   return (
-    <div className='users-table-wrapper'>
-      <table className='users-table'>
-        <thead className='table-head'>
-          <tr className='table-row'>
-            <th className='table-header'>ORGANIZATION</th>
-            <th className='table-header'>USERNAME</th>
-            <th className='table-header'>EMAIL</th>
-            <th className='table-header'>PHONE NUMBER</th>
-            <th className='table-header'>DATE JOINED</th>
-            <th className='table-header'>STATUS</th>
-          </tr>
-        </thead>
-        <tbody className='table-body'>
-          {displayedUsers.map((user) => (
-            <TableRow key={uuidv4()} user={user} />
-          ))}
-        </tbody>
-      </table>
+    <>
+      <div className="users-table-wrapper">
+        <table className="users-table">
+          <thead className="table-head">
+            {/* <tr className="table-row"> */}
+            <th className="table-header">
+              ORGANIZATION
+              <span>
+                <img src={filter} alt="filter" />
+              </span>
+            </th>
+            <th className="table-header">
+              USERNAME
+              <span>
+                <img src={filter} alt="filter" />
+              </span>
+            </th>
+            <th className="table-header">
+              EMAIL
+              <span>
+                <img src={filter} alt="filter" />
+              </span>
+            </th>
+            <th className="table-header">
+              PHONE NUMBER
+              <span>
+                <img src={filter} alt="filter" />
+              </span>
+            </th>
+            <th className="table-header">
+              DATE JOINED
+              <span>
+                <img src={filter} alt="filter" />
+              </span>
+            </th>
+            <th className="table-header">
+              STATUS
+              <span>
+                <img src={filter} alt="filter" />
+              </span>
+            </th>
+            {/* </tr> */}
+          </thead>
+          <tbody className="table-body">
+            {/* <tr className="table-row"> */}
+            {displayedUsers.map((user) => (
+              <TableRow key={uuidv4()} user={user} />
+            ))}
+            {/* </tr> */}
+          </tbody>
+        </table>
+      </div>
       <Pagination
         totalUsers={users.length}
         usersPerPage={usersPerPage}
         currentPage={currentPage}
         onPageChange={setCurrentPage}
       />
-    </div>
+    </>
   );
 };
 
-export default UserTable;
+export default UsersTable;
