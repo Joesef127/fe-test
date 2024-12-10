@@ -1,6 +1,7 @@
 .login-container {
   @include flex-center;
   height: 100vh;
+  flex-wrap: wrap;
 
   .login-left,
   .login-right {
@@ -13,8 +14,8 @@
   .login-left {
     background-color: $background;
     height: 100vh;
-    align-items: flex-start;
-    padding-top: 80px;
+    align-items: center;
+    // padding-bottom: 80px;
 
     .image-wrapper {
       max-width: 600px;
@@ -22,8 +23,8 @@
       align-items: flex-start;
       justify-content: space-between;
       flex-direction: column;
-      // height: 60%;
-      gap: 50px;
+      gap: 139px;
+      padding-bottom: 80px;
     }
 
     .logo {
@@ -157,6 +158,37 @@
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
       }
+    }
+  }
+}
+
+// Responsive design
+@include screen(medium) {
+  .login-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    @include hideScrollBar;
+
+    .login-left {
+      height: 100%;
+      width: 100%;
+      align-items: flex-start;
+
+      .image-wrapper {
+        gap: 30px;
+        padding-bottom: 0px;
+      }
+
+      .logo {
+        width: 120px;
+      }
+    }
+
+    .login-right {
+      // height: 100%;
+      width: 100%;
     }
   }
 }

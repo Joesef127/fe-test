@@ -22,14 +22,31 @@
   transition: $property $duration ease-in-out;
 }
 
-@mixin border-radius($radius: 4px) {
-  border-radius: $radius;
+@mixin hideScrollBar {
+  overflow-y: scroll;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+
+  &::-webkit-scrollbar {
+    display: none; 
+  }
 }
 
-@mixin font-size($size: 1rem) {
-  font-size: $size;
-}
-
-@mixin box-shadow($color: rgba(0, 0, 0, 0.2)) {
-  box-shadow: 0 4px 6px $color;
+//media queries
+@mixin screen($breakpoint) {  
+  @if ($breakpoint == 'medium') {  
+    @media screen and (max-width: 955px) {  
+      @content;  
+    }  
+  }  
+  @else if ($breakpoint == 'small') {  
+    @media screen and (max-width: 575px) {  
+      @content;  
+    }  
+  }
+  @else if ($breakpoint == 'large') {  
+    @media screen and (max-width: 1200px) {  
+      @content;  
+    }  
+  }
 }

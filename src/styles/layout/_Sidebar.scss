@@ -1,16 +1,11 @@
 .sidebar-container {
+  padding-top: 30px;
   width: max-content;
   // max-width: 283px;
   height: 100vh;
   box-shadow: 0px 5px 20px 0px #0000000a;
   background-color: $white;
-  overflow-y: scroll;
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
-
-  &::-webkit-scrollbar {
-    display: none; 
-  }
+  @include hideScrollBar;
 
   .switch-organization-div {
     display: flex;
@@ -33,4 +28,11 @@
 .link {
   text-decoration: none;
   color: inherit;
+}
+
+//responsiveness
+@include screen('medium') {
+  .sidebar-container {
+    display: none;
+  }
 }

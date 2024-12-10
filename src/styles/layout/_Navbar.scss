@@ -102,3 +102,81 @@
     }
   }
 }
+
+
+//responsiveness
+@include screen('small') {
+  .navbar {
+    padding: 10px;
+
+    .nav-logo-div {
+      width: 20%;
+
+      .navbar-logo {
+        width: 90px;
+        height: 20px;
+      }
+    }
+
+    .nav-contents {
+
+      .nav-search-box {
+        width: 100px;
+
+        .search-input {
+          padding: 5px;
+        }
+
+        .search-btn {
+          padding: 4px 5px;
+        }
+      }
+
+      .user-info {
+        gap: 10px;
+
+        .info-span:last-of-type {
+          margin-left: -10px;
+        }
+      }
+    }
+  }
+}
+
+@include screen('medium') {
+  .navbar {
+    padding: 15px;
+
+    .nav-logo-div {
+      width: 25%;
+
+      .navbar-logo {
+        width: 120px;
+        height: 25px;
+      }
+    }
+
+    .nav-contents {
+
+      .nav-search-box {
+        width: 150px;
+
+        .search-input {
+          padding: 7px;
+        }
+
+        .search-btn {
+          padding: 6px 7px;
+        }
+      }
+
+      .user-info {
+        gap: 15px;
+
+        .info-span:last-of-type {
+          margin-left: -15px;
+        }
+      }
+    }
+  }
+}

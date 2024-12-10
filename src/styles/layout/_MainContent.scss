@@ -1,13 +1,14 @@
 .main-container {
-  width: max-content;
+  width: calc(100% - 283px);
   height: 100vh;
   padding: 60px;
-  overflow-y: scroll;
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
+  @include hideScrollBar;
+}
 
-  &::-webkit-scrollbar {
-    display: none; 
+//responsiveness
+@include screen('medium') {
+  .main-container {
+    width: 100%;
+    padding: 10px;
   }
-
 }

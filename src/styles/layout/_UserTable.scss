@@ -1,7 +1,7 @@
 /* Wrapper for the entire table */
 .users-table-wrapper {
   position: relative;
-  width: max-content;
+  width: 100%;
   background-color: $white;
   margin-top: 40px;
   padding: 30px;
@@ -139,31 +139,18 @@
   color: #e4043b;
 }
 
-/* Pagination styles */
-// .pagination {
-//   display: flex;
-//   justify-content: flex-start;
-//   padding: 15px 0;
-//   width: 300px;
-//   overflow-x: hidden;
-// }
+//responsiveness
+@include screen('large') {
+  .users-table-wrapper {
+    padding: 20px;
+    margin-top: 30px;
+    min-width: 1000px;
+  }
+}
 
-// .pagination button {
-//   border: 1px solid #ddd;
-//   background-color: white;
-//   padding: 5px 10px;
-//   margin: 0 5px;
-//   border-radius: 5px;
-//   cursor: pointer;
-//   font-size: 14px;
-// }
-
-// .pagination button.active {
-//   background-color: #555;
-//   color: white;
-//   font-weight: bold;
-// }
-
-// .pagination button:hover {
-//   background-color: #eee;
-// }
+@include screen('medium') {
+  .users-table-wrapper {
+    padding: 10px;
+    margin-top: 20px;
+  }
+}

@@ -12,6 +12,8 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  border: 1px solid rgb(33, 63, 125, 10%);
+  border-width: 0 0 1px 0;
 
   &:first-child {
     padding-top: 0;
@@ -19,13 +21,14 @@
 
   &:nth-child(1), &:nth-child(3) {
     padding-bottom: 0;
+    border: 0;
   }
 
   &:nth-child(2), &:nth-child(4) {
     padding: 30px 0 28px 0;
     gap: 0;
     border: 1px solid rgb(33, 63, 125, 10%);
-    border-width: 0 0 1 0;
+    border-width: 0 0 1px 0;
   }
 
   .section-heading {
@@ -48,6 +51,7 @@
 .profile-item {
   display: flex;
   flex-direction: column;
+  min-width: 216px;
 
   .item-label {
     width: max-content;
@@ -70,5 +74,34 @@
     color: $text-secondary;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+  }
+}
+
+//responsiveness
+@include screen('medium') {
+  .profile-page {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .profile-section {
+    gap: 20px;
+  }
+
+  .profile-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-item {
+    min-width: 70px;
+
+    .item-label {
+      font-size: $font-size-1;
+    }
+
+    .item-text {
+      font-size: $font-size-2;
+    }
   }
 }
