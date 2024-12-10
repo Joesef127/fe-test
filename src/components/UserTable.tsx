@@ -5,7 +5,6 @@ import { fetchUsers } from '../service/api.ts';
 import { v4 as uuidv4 } from 'uuid';
 import filter from '../assets/icons/filter.png';
 import error_loading from '../assets/icons/error_loading.png';
-import UserOptions from './UserOptions.tsx';
 import UserFilter from './UserFilter.tsx';
 
 const UserTable: React.FC = () => {
@@ -15,16 +14,11 @@ const UserTable: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [usersPerPage, setUsersPerPage] = useState(10);
 
-  // Filter modal states
   const [isFilterVisible, setIsFilterVisible] = useState(false);
   const [filterPosition, setFilterPosition] = useState<{
     x: number;
     y: number;
   } | null>(null);
-
-  // User options modal states
-  //  const [isOptionsVisible, setIsOptionsVisible] = useState(false);
-  //  const [optionsPosition, setOptionsPosition] = useState<{ x: number; y: number } | null>(null);
 
   useEffect(() => {
     const loadUsers = async () => {
@@ -42,11 +36,9 @@ const UserTable: React.FC = () => {
     loadUsers();
   }, []);
 
-  // Handle outside clicks for the filter modal
   useEffect(() => {
     const handleClickOutside = () => {
       if (isFilterVisible) setIsFilterVisible(false);
-      // if (isOptionsVisible) setIsOptionsVisible(false);
     };
 
     window.addEventListener('click', handleClickOutside);
@@ -84,15 +76,6 @@ const UserTable: React.FC = () => {
     setIsFilterVisible(true);
   };
 
-  // const handleOpenOptions = (
-  //   e: React.MouseEvent,
-  //   position: { x: number; y: number }
-  // ) => {
-  //   e.stopPropagation(); // Prevent window click handler from triggering
-  //   setOptionsPosition(position);
-  //   setIsOptionsVisible(true);
-  // };
-
   return (
     <>
       <div className="users-table-wrapper">
@@ -122,8 +105,8 @@ const UserTable: React.FC = () => {
               className="user-filter-wrapper"
               style={{
                 position: 'absolute',
-                top: filterPosition.y - 400,
-                left: filterPosition.x - 450,
+                top: filterPosition.y - 220,
+                left: filterPosition.x - 400,
                 zIndex: 1000,
               }}
               onClick={(e) => e.stopPropagation()}
@@ -140,21 +123,6 @@ const UserTable: React.FC = () => {
             </div>
           ))}
 
-          {/* User Options Modal */}
-          {/* {isOptionsVisible && optionsPosition && (
-            <div
-              className="user-options-wrapper"
-              style={{
-                position: 'absolute',
-                top: optionsPosition.y + 10,
-                left: optionsPosition.x - 150,
-                zIndex: 1000,
-              }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <UserOptions />
-            </div>
-          )} */}
         </div>
       </div>
 

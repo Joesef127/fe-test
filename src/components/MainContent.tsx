@@ -5,7 +5,6 @@ import active_users from '../assets/icons/active_users.png';
 import users_with_loans from '../assets/icons/users_with_loans.png';
 import users_with_savings from '../assets/icons/users_with_savings.png';
 import UserTable from './UserTable.tsx';
-import UserFilter from './UserFilter.tsx';
 
 const MainContent: React.FC = () => {
   return (

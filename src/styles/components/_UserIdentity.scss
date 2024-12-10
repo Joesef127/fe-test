@@ -1,0 +1,139 @@
+.identity-wrapper {
+  background-color: $white;
+  padding: 30px 30px 0 30px;
+  border-radius: 4px;
+  border: 1px solid #213f7d0f;
+  box-shadow: 3px 5px 20px 0px #0000000a;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 40px;
+
+  .identity-container {
+    display: flex;
+    align-items: center;
+    // gap: 20px;
+
+    .id-box {
+      border-right: 1px solid rgb(84, 95, 125, 20%);
+      padding: 0 30px;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+
+    .user-identity {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .user-dp {
+        border-radius: 4px;
+        opacity: 0.16px;
+        background-color: #dbe0ea;
+        padding: 30px;
+        border-radius: 100%;
+      }
+
+      .user-info-div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .user-name {
+          color: $text-color;
+          font-size: 22px;
+          font-weight: $font-weight-2;
+          line-height: 25.81px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+
+        .user-id {
+          color: $text-secondary;
+          font-size: $font-size-2;
+          font-weight: $font-weight-1;
+          line-height: 16.42px;
+          text-align: left;
+          text-underline-position: from-font;
+          text-decoration-skip-ink: none;
+        }
+      }
+    }
+
+    .user-tier-div {
+      padding: 28px 30px;
+      @include flex-center;
+      flex-direction: column;
+      gap: 10px;
+
+      .user-tier-text {
+        font-size: $font-size-2;
+        font-weight: $font-weight-2;
+        line-height: 16.42px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+
+      .user-tier-icons {
+        display: flex;
+        gap: 4px;
+      }
+    }
+
+    .user-account-div {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 14px 30px 17px 30px;
+
+      .user-balance {
+        color: $text-color;
+        font-size: 22px;
+        font-weight: $font-weight-2;
+        line-height: 25.81px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+      }
+
+      .user-bank {
+        font-size: $font-size-1;
+        font-weight: $font-weight-1;
+        line-height: 14.08px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;        
+      }
+    }
+  }
+
+  .details-list {
+    display: flex;
+    justify-content: space-between;
+    // gap: 20px;
+
+    .list-option {
+      font-size: $font-size-base;
+      font-weight: $font-weight-1;
+      line-height: 19.09px;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      padding: 10px 15px;
+      border: 2px solid transparent;
+      border-width: 0 0 2.5px 0;
+      color: $black;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border: 2px solid $primary-color;
+        border-width: 0 0 2.5px 0;
+        color: $primary-color;
+      }
+    }
+  }
+}

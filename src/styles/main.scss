@@ -11,6 +11,8 @@
 @import '../styles/layout/Sidebar';
 @import '../styles/layout/MainContent';
 @import '../styles/layout/UserTable';
+@import '../styles/layout/DetailsContent';
+@import '../styles/layout/UserProfile';
 
 //components
 @import '../styles/components/SideBarNav';
@@ -21,11 +23,13 @@
 @import '../styles/components/UserFilter';
 @import '../styles/components/Spinner';
 @import '../styles/components/ErrorLoading';
+@import '../styles/components/UserIdentity';
 
 //pages
 @import '../styles/style-pages/Login';
 @import '../styles/style-pages/App';
 @import '../styles/style-pages/Dashboard';
+@import '../styles/style-pages/UserDetails';
 
 //vendors
 @import '../styles/vendors/fonts';

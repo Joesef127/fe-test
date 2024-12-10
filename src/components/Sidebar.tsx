@@ -5,6 +5,7 @@ import home from '../assets/icons/home.png';
 import SideBarItems from '../utils/SideBarData.ts';
 import SideBarSection from '../utils/SideBarSection.tsx';
 import SideBarNav from '../utils/SideBarNav.tsx';
+import { Link } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {
   return (
@@ -19,7 +20,7 @@ const Sidebar: React.FC = () => {
         </span>
       </div>
 
-      <SideBarNav icon={home} label="Dashboard" />
+      <Link to={"/dashboard"} className='link'><SideBarNav icon={home} label="Dashboard" /></Link>
 
       <ul>
         {SideBarItems.map((group, index) => (
