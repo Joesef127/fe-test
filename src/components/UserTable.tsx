@@ -26,6 +26,7 @@ const UserTable: React.FC = () => {
         const apiData = await fetchUsers();
         setUsers(apiData.users);
       } catch (error) {
+        console.error('Error loading user data:', error);
         setError('Failed to load user data. Please try again.');
       } finally {
         setLoading(false);
@@ -69,7 +70,7 @@ const UserTable: React.FC = () => {
   );
 
   const handleOpenFilter = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent window click handler from triggering
+    e.stopPropagation();
     const rect = e.currentTarget.getBoundingClientRect();
     setFilterPosition({ x: rect.right, y: rect.top + window.scrollY });
     setIsFilterVisible(true);
@@ -98,14 +99,13 @@ const UserTable: React.FC = () => {
             </div>
           ))}
 
-          {/* Filter Modal */}
           {isFilterVisible && filterPosition && (
             <div
               className="user-filter-wrapper"
               style={{
                 position: 'absolute',
-                top: filterPosition.y - 220,
-                left: filterPosition.x - 400,
+                top: filterPosition.y - 400,
+                left: filterPosition.x - 450,
                 zIndex: 1000,
               }}
               onClick={(e) => e.stopPropagation()}
@@ -117,7 +117,9 @@ const UserTable: React.FC = () => {
 
         <div className="table-body">
           {displayedUsers.map((user, index) => (
-            <TableRow key={index} user={user} />
+            <div key={index} className="table-row-wrapper">
+              <TableRow user={user} />
+            </div>
           ))}
         </div>
       </div>
