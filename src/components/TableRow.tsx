@@ -30,24 +30,25 @@ const TableRow: React.FC<{ user: any }> = ({ user }) => {
   };
 
   return (
-    <div className="table-row" onClick={closeOptions}>
-      <span className="table-data">{user.organization}</span>
-      <span className="table-data">{user.username}</span>
-      <span className="table-data">{user.email}</span>
-      <span className="table-data">{user.phoneNumber}</span>
-      <span className="table-data">{user.dateJoined}</span>
-      <span className="table-data">
-        <span className={getStatusClass(user.status)}>{user.status}</span>
-        <button className="options-icon" onClick={toggleOptions}>
-          <img src={options} alt="Options" />
-        </button>
-        {/* Conditionally render the UserOptions */}
-        {isOptionsVisible && (
-          <div className="user-options-wrapper">
-            <UserOptions />
-          </div>
-        )}
-      </span>
+    <div className="table-row-wrapper">
+      <div className="table-row">
+        <span className="table-data">{user.organization}</span>
+        <span className="table-data">{user.username}</span>
+        <span className="table-data">{user.email}</span>
+        <span className="table-data">{user.phoneNumber}</span>
+        <span className="table-data">{user.dateJoined}</span>
+        <span className="table-data">
+          <span className={getStatusClass(user.status)}>{user.status}</span>
+          <button className="options-icon" onClick={toggleOptions}>
+            <img src={options} alt="Options" />
+          </button>
+        </span>
+      </div>
+      {isOptionsVisible && (
+        <div className="user-options-wrapper">
+          <UserOptions />
+        </div>
+      )}
     </div>
   );
 };

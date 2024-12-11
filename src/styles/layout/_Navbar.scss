@@ -87,7 +87,7 @@
         text-decoration-line: underline;
         text-decoration-style: solid;
         text-underline-position: from-font;
-        text-decoration-skip-ink: none;        
+        text-decoration-skip-ink: none;
       }
 
       .info-span:last-of-type {
@@ -103,52 +103,16 @@
   }
 }
 
-
 //responsiveness
-@include screen('small') {
-  .navbar {
-    padding: 10px;
-
-    .nav-logo-div {
-      width: 20%;
-
-      .navbar-logo {
-        width: 90px;
-        height: 20px;
-      }
-    }
-
-    .nav-contents {
-
-      .nav-search-box {
-        width: 100px;
-
-        .search-input {
-          padding: 5px;
-        }
-
-        .search-btn {
-          padding: 4px 5px;
-        }
-      }
-
-      .user-info {
-        gap: 10px;
-
-        .info-span:last-of-type {
-          margin-left: -10px;
-        }
-      }
-    }
-  }
-}
-
 @include screen('medium') {
   .navbar {
     padding: 15px;
+    display: grid;
+    grid-template-columns: 180px 1fr auto;
 
     .nav-logo-div {
-      width: 25%;
+      // width: 25%;
+      width: max-content;
 
       .navbar-logo {
         width: 120px;
@@ -157,6 +121,9 @@
     }
 
     .nav-contents {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
 
       .nav-search-box {
         width: 150px;
@@ -172,9 +139,78 @@
 
       .user-info {
         gap: 15px;
+        justify-content: flex-end;
+        padding-right: 10px;
 
         .info-span:last-of-type {
           margin-left: -15px;
+        }
+      }
+    }
+  }
+}
+
+@include screen('small') {
+  .navbar {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 120px 1fr auto;
+
+    .nav-logo-div {
+      // width: 25%;
+      width: max-content;
+
+      .navbar-logo {
+        width: 90px;
+        height: 20px;
+      }
+    }
+
+    .nav-contents {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+
+      .nav-search-box {
+        width: 120px;
+
+        .search-input {
+          padding: 4px;
+        }
+
+        .search-btn {
+          padding: 3px 4px;
+        }
+      }
+
+      .user-info {
+        gap: 10px;
+        justify-content: flex-end;
+        padding-right: 5px;
+
+        .info-span {
+          .user-avatar {
+            width: 25px;
+            border-radius: 50%;
+          }
+
+          .bell-icon {
+            width: 20px;
+            height: 20px;
+          }
+
+          p {
+            font-size: $font-size-1;
+          }
+        }
+
+        .info-span:first-of-type {
+          margin-right: 10px;
+          margin-bottom: 0;
+        }
+
+        .info-span:last-of-type {
+          margin-left: -8px;
         }
       }
     }

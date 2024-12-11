@@ -51,11 +51,12 @@
 
 /* Body styles */
 .table-body {
+  position: relative;
   display: grid;
   gap: 1px;
 
   .table-row-wrapper {
-    position: relative;
+    // position: relative;
 
     &:last-child {
       .table-row {
@@ -67,7 +68,6 @@
 }
 
 .table-row {
-  // position: relative;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   padding: 20px 0;

@@ -1,47 +1,127 @@
-# Getting Started with Create React App
+# Lendsqr User Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive, pixel-perfect web application for managing user data, developed as part of the Lendsqr Frontend Engineer Assessment. The project adheres to the Figma design specification and implements best practices in code structure, responsiveness, and design fidelity.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Setup and Installation](#setup-and-installation)
+5. [Folder Structure](#folder-structure)
+6. [Development Process](#development-process)
+7. [Testing](#testing)
+8. [Demo](#demo)
+9. [Contributions](#contributions)
+10. [License](#license)
+11. [Contact](#contact)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This application is a user management system designed to:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Fetch and display user data in a clean, responsive layout.
+- Allow users to view detailed information about specific users.
+- Maintain a responsive sidebar navigation, with mobile-friendly hamburger functionality.
+- Save and retrieve user data from local storage, adhering to modern frontend practices.
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Core Features
 
-### `npm run build`
+#### Authentication
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- A responsive login page that validates user credentials before granting access.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Dashboard
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Displays a list of users fetched from a mocked API.
+- Includes search and filter functionality for improved user management.
 
-### `npm run eject`
+#### User Details Page
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Showcases detailed user information grouped into logical sections.
+- Maintains a clean, structured layout with clear typography.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Responsive Design
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Fully responsive interface across desktop, tablet, and mobile devices.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Sidebar Navigation
 
-## Learn More
+- Dynamic navigation system with a toggleable hamburger menu for smaller screens.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-# lendsqr-fe-test
+- React - For building reusable UI components.
+- TypeScript - For type safety and improved code readability.
+- SCSS - For modular and maintainable styling.
+  - Mixins for Media Queries: Ensures streamlined responsive design.
+- React Router - For client-side routing between pages.
+- Local Storage - For persisting user details.
+
+## Setup and Installation
+
+Follow the steps below to set up the project on your local machine:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/joesef127/lendsqr-user-management.git
+   ```
+2. Navigate into the project directory:
+   cd lendsqr-user-management
+3. Install dependencies:
+   npm install
+4. Start the development server:
+   npm start
+   The application will be available at http://localhost:3000/.
+
+## Project Structure
+
+src/
+├── assets/ # Icons, images, and static files
+├── components/ # Reusable components (e.g., Sidebar, ProfileItem)
+├── pages/ # Page-level components (e.g., Login, Dashboard, UserDetails)
+├── styles/ # SCSS files with global styling
+├── utils/ # Helper functions (e.g., API call methods)
+├── App.tsx # Main application file
+└── index.tsx # Entry point of the React app
+
+## Development Process
+
+This project was developed in the following stages:
+
+- Login Page: Designed and styled a pixel-perfect login page with SCSS and responsive media queries.
+- Dashboard: Implemented user list fetching and rendering with dynamic search and filters.
+- User Details Page: Rendered user information dynamically with reusable components (ProfileItem and ProfileBox).
+- Responsive Design: Ensured design fidelity across various screen sizes using mixins for media queries.
+
+## Demo
+
+A live demo of the application can be accessed here: https://adedayo-adegbola-lendsqr-fe-test.vercel.app
+
+## Contributions
+
+Contributions are welcome! Follow the steps below to contribute:
+
+### Fork the repository.
+
+Create a new branch:
+git checkout -b feature/your-feature-name
+
+### Make your changes and commit:
+
+git commit -m "Add your commit message"
+
+### Push to your branch:
+
+git push origin feature/your-feature-name
+
+### Open a pull request.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contact
+
+For any questions or feedback, please reach out to me at Adegboladayor@gmail.com.com.

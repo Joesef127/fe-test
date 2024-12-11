@@ -26,7 +26,6 @@ const UserTable: React.FC = () => {
         const apiData = await fetchUsers();
         setUsers(apiData.users);
       } catch (error) {
-        console.error('Error loading user data:', error);
         setError('Failed to load user data. Please try again.');
       } finally {
         setLoading(false);
@@ -118,11 +117,8 @@ const UserTable: React.FC = () => {
 
         <div className="table-body">
           {displayedUsers.map((user, index) => (
-            <div key={index} className="table-row-wrapper">
-              <TableRow user={user} />
-            </div>
+            <TableRow key={index} user={user} />
           ))}
-
         </div>
       </div>
 
