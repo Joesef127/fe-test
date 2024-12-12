@@ -96,23 +96,22 @@ const UserTable: React.FC = () => {
                 className="thead-icon"
                 onClick={handleOpenFilter}
               />
+              {isFilterVisible && filterPosition && (
+                <div
+                  className="user-filter-wrapper"
+                  style={{
+                    position: 'absolute',
+                    top: filterPosition.y - 400,
+                    left: filterPosition.x - 450,
+                    zIndex: 1000,
+                  }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <UserFilter />
+                </div>
+              )}
             </div>
           ))}
-
-          {isFilterVisible && filterPosition && (
-            <div
-              className="user-filter-wrapper"
-              style={{
-                position: 'absolute',
-                top: filterPosition.y - 400,
-                left: filterPosition.x - 450,
-                zIndex: 1000,
-              }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <UserFilter />
-            </div>
-          )}
         </div>
 
         <div className="table-body">

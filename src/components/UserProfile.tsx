@@ -34,7 +34,10 @@ const Profile: React.FC = () => {
       heading: null,
       items: [
         { item_label: 'Office Email', item_text: 'grace@lendsqr.com' },
-        { item_label: 'Monthly Income', item_text: '₦200,000.00 - ₦400,000.00' },
+        {
+          item_label: 'Monthly Income',
+          item_text: '₦200,000.00 - ₦400,000.00',
+        },
         { item_label: 'Loan Repayment', item_text: '40,000' },
       ],
     },
@@ -57,13 +60,14 @@ const Profile: React.FC = () => {
     },
   ];
 
+
   return (
     <div className="profile-page">
       {sections.map((section, index) => (
-        <ProfileSection 
-          key={index} 
-          heading={section.heading} 
-          items={section.items} 
+        <ProfileSection
+          key={index}
+          heading={section.heading}
+          items={section.items}
         />
       ))}
     </div>

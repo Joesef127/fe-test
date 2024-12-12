@@ -5,8 +5,7 @@ const BASE_URL = 'https://run.mocky.io/v3/d1e2367a-7414-4a6f-a93e-4e4ba281c358';
 export const fetchUsers = async () => {
   try {
     const response = await axios.get(BASE_URL);
-    const storedUsers = localStorage.getItem('users');
-    return storedUsers ? JSON.parse(storedUsers) : response.data;
+    return response.data;
   } catch (error) {
     if (error instanceof Error) {
       console.error('Error fetching user data:', error.message);
@@ -15,4 +14,4 @@ export const fetchUsers = async () => {
     }
     throw error;
   }
-}
+};
