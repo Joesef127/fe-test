@@ -10,11 +10,9 @@ A responsive, pixel-perfect web application for managing user data, developed as
 4. [Setup and Installation](#setup-and-installation)
 5. [Folder Structure](#folder-structure)
 6. [Development Process](#development-process)
-7. [Testing](#testing)
-8. [Demo](#demo)
-9. [Contributions](#contributions)
-10. [License](#license)
-11. [Contact](#contact)
+7. [Demo](#demo)
+8. [Contributions](#contributions)
+9. [Contact](#contact)
 
 ## Overview
 
@@ -76,7 +74,7 @@ Follow the steps below to set up the project on your local machine:
    npm start
    The application will be available at http://localhost:3000/.
 
-## Project Structure
+## Folder Structure
 
 src/
 ├── assets/ # Icons, images, and static files
