@@ -66,7 +66,7 @@ Follow the steps below to set up the project on your local machine:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/joesef127/lendsqr-user-management.git
+   git clone https://github.com/joesef127/lendsqr-fe-test.git
    ```
 2. Navigate into the project directory:
    cd lendsqr-user-management
@@ -80,11 +80,17 @@ Follow the steps below to set up the project on your local machine:
 
 src/
 ├── assets/ # Icons, images, and static files
+
 ├── components/ # Reusable components (e.g., Sidebar, ProfileItem)
+
 ├── pages/ # Page-level components (e.g., Login, Dashboard, UserDetails)
+
 ├── styles/ # SCSS files with global styling
+
 ├── utils/ # Helper functions (e.g., API call methods)
+
 ├── App.tsx # Main application file
+
 └── index.tsx # Entry point of the React app
 
 ## Development Process
