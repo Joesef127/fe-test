@@ -77,6 +77,7 @@ Follow the steps below to set up the project on your local machine:
 ## Folder Structure
 
 src/
+
 ├── assets/ # Icons, images, and static files
 
 ├── components/ # Reusable components (e.g., Sidebar, ProfileItem)
