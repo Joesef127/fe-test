@@ -1,6 +1,6 @@
 # User Management App
 
-A responsive, pixel-perfect web application for managing user data, developed as part of the Lendsqr Frontend Engineer Assessment. The project adheres to the Figma design specification and implements best practices in code structure, responsiveness, and design fidelity.
+A responsive, pixel-perfect web application for managing user data, developed as part of the Frontend Engineer Assessment. The project adheres to the Figma design specification and implements best practices in code structure, responsiveness, and design fidelity.
 
 ## Table of Contents
 
